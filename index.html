@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلبوم گوگولی من 🍫🐥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- پس‌زمینه گوگولی -->
+    <div class="cute-bg">
+        <span class="float-sticker">🐥</span>
+        <span class="float-sticker">💖</span>
+        <span class="float-sticker">🎀</span>
+        <span class="float-sticker">🧸</span>
+        <span class="float-sticker">🫂</span>
+        <span class="float-sticker">👼</span>
+        <span class="float-sticker">⭐</span>
+        <span class="float-sticker">🍫</span>
+        <span class="float-sticker">🐣</span>
+        <span class="float-sticker">💫</span>
+    </div>
+
+    <!-- صفحه اصلی -->
+    <div id="page1" class="page active">
+        <div class="stickers-top">
+            <span class="big-sticker">🍫</span>
+            <span class="big-sticker">🐥</span>
+        </div>
+
+        <div class="photo-frame">
+            <img src="images/photo.jpg" alt="عکس من" class="main-photo">
+        </div>
+
+        <button class="next-btn" onclick="goToPage2()">
+            بریم صفحه بعدی 💕
+        </button>
+    </div>
+
+    <!-- صفحه دوم (آلبوم) -->
+    <!-- صفحه دوم (آلبوم ویدیو) -->
+<div id="page2" class="page">
+    <h1 class="album-title">🎀 آلبوم ویدیوهای من 🎀</h1>
+    
+    <div class="album-grid">
+        <div class="video-card" onclick="openVideo('videos/video1.mp4')">
+            <video class="video-thumb" muted preload="metadata">
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+            <div class="video-label">ویدیو ۱ 🐥🍫</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('videos/video2.mp4')">
+            <video class="video-thumb" muted preload="metadata">
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+            <div class="video-label">ویدیو ۲ 🐥🍫</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('videos/video3.mp4')">
+            <video class="video-thumb" muted preload="metadata">
+                <source src="videos/video3.mp4" type="video/mp4">
+            </video>
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+            <div class="video-label">ویدیو ۳ 🐥🍫</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('videos/video4.mp4')">
+            <video class="video-thumb" muted preload="metadata">
+                <source src="videos/video4.mp4" type="video/mp4">
+            </video>
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+            <div class="video-label">ویدیو ۴ 🐥🍫</div>
+        </div>
+    </div>
+
+    <button class="back-btn" onclick="goToPage1()">
+        برگرد به صفحه اول 💫
+    </button>
+</div>
+
+    <!-- ورودی مخفی برای آپلود عکس -->
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+<!-- پنجره بزرگ پخش ویدیو -->
+<div id="videoModal" class="video-modal">
+    <span class="close-btn" onclick="closeVideo()">✖</span>
+    <video id="bigVideo" controls playsinline></video>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
